@@ -8,7 +8,7 @@ Students need no AWS account, no credits and no local VM. Each student gets one
 SSH key file, and that's it.
 
 Originally built for, and in use in, an undergraduate CTF-style ethical hacking
-course with 17 students.
+course.
 
 ```
                        your AWS account (one region, default VPC)

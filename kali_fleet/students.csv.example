@@ -1,0 +1,6 @@
+# One student ID per line (first column is used; extra columns are ignored).
+# No IPs needed: each student's own SSH key is the access control.
+# Copy this file to students.csv before running provision_students.sh.
+# Editing in Excel/Numbers is fine -- BOMs and quoting are handled.
+student001
+student002

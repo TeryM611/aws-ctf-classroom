@@ -1,0 +1,5 @@
+# Who may reach the target's app ports: one name,ip per line.
+# deploy_target.sh copies this to roster.csv and adds your own "instructor" row.
+# If students attack from the Kali fleet, don't type their IPs here --
+# run ./link_kali_to_target.sh, which fills them in automatically.
+# student1,203.0.113.10

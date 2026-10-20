@@ -1,0 +1,16 @@
+# One service per challenge app. To add a challenge:
+#   1. put its folder under target/apps/
+#   2. copy the block below, change the name, APP_PATH and port
+#   3. add the port to APP_PORTS in config.env
+#
+# Why there's no `internal: true` network to stop a command-injection
+# challenge from calling out: it was tried, and `internal: true` also blocks
+# Docker's port publishing, so every challenge became unreachable. The real
+# isolation is at the EC2 level instead (no IAM role on the instance; IMDSv2
+# required with hop limit 1), set in deploy_target.sh.
+services:
+  example-challenge:
+    build: { context: .., dockerfile: deploy/Dockerfile, args: { APP_PATH: apps/example_challenge } }
+    environment: ["PORT=5000"]
+    ports: ["5000:5000"]
+    restart: unless-stopped

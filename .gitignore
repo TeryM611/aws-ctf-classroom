@@ -1,0 +1,13 @@
+# Secrets and per-deployment state -- never commit these.
+*.pem
+keys/
+student_keys/
+students.csv
+roster.csv
+kali_roster_output.csv
+distribution_checklist.md
+.instance_id
+.sg_id
+.bucket
+*.tar.gz
+.DS_Store
